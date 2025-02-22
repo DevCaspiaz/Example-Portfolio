@@ -1,0 +1,150 @@
+@import "../base/_variable.less";
+@import "../base/_media.less";  
+header{
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .75rem clamp(0.625rem, 10.067vw - 5.831rem, 6.25rem);
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        width: 100vw;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+        &__company{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            span{
+                display: inline-block;
+                font-size: 2rem;
+            }
+            &__logo{
+                background-color: @bg-color;
+                border-radius: 50%;
+                padding: 7px 15px;
+                color: #fff;
+            }
+        }
+        &__menu{
+            display: flex;
+            align-items: center;
+            position: relative;
+            input {
+                display: none;
+                &:checked + .burger span:nth-of-type(1) {
+                    transform: rotate(45deg);
+                    left: 5px;
+                  }
+                &:checked + .burger span:nth-of-type(2) {
+                    width: 0%;
+                    opacity: 0;
+                  }
+                &:checked + .burger span:nth-of-type(3) {
+                    transform: rotate(-45deg);
+                    top: 28px;
+                    left: 5px;
+                  }
+              }
+            .burger {
+                position: relative;
+                width: 40px;
+                height: 30px;
+                background: transparent;
+                cursor: pointer;
+                display: none;
+                span {
+                    display: block;
+                    position: absolute;
+                    height: 4px;
+                    width: 100%;
+                    background: #333333;
+                    border-radius: 9px;
+                    opacity: 1;
+                    left: 0;
+                    transform: rotate(0deg);
+                    transition: .3s ease-in-out;
+                    top: 0px;
+                    transform-origin: left center;
+                  }
+                  span:nth-of-type(2) {
+                    top: 50%;
+                    transform: translateY(-50%);
+                  }
+                  span:nth-of-type(3) {
+                    top: 100%;
+                    transform: translateY(-100%);
+                  }
+              }
+            ul{
+                display: flex;
+                gap: 1rem;
+                a:not(.link){
+                    color: #333333;
+                    padding: 5px;
+                    position: relative;
+                    transition:  color .3s ease-in-out;
+                    &::before{
+                        content: "";
+                        width: 140%;
+                        height: 120%;
+                        position: absolute;
+                        top: 0;
+                        background-color: @bg-color;
+                        transform: skewX(-23deg);
+                        border-radius: 5px;
+                        top: -10%;
+                        left: 50%;
+                        opacity: 0;
+                        transition: all .3s ease-in-out;
+                        outline: none;
+                        border: none;
+                    }
+                    &:hover{
+                        color: #fff;
+                    }
+                    &:hover::before{
+                        left: -20%;
+                        top: -10%;
+                        opacity: 1;
+                        z-index: -1;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+@media (max-width: 820px){
+    header .nav__menu{
+        flex-direction: column;
+        gap: 1rem;
+        .burger{
+            display: block;
+            z-index: 999;
+            position: relative;
+        }
+        ul{
+            position: fixed;
+            top: 0;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            right: -100%;
+            width: max-content;
+            height: 100vh;
+            padding: 1.5rem;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            z-index: 998;
+            transition: all .3s ease-in-out;
+            background-color: #fff;
+        }
+        #burger:checked ~ ul{
+            right: 0;
+        }
+    }
+}

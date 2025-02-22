@@ -1,0 +1,8 @@
+.link {
+  width: max-content !important;
+  padding: 15px !important;
+  border-radius: 5px !important;
+  background-color: #a53dff !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+}
