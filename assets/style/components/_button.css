@@ -5,4 +5,9 @@
   background-color: #a53dff !important;
   color: #fff !important;
   font-weight: 600 !important;
+  transition: all 0.3s ease-in-out;
+}
+.link:hover {
+  background-color: #132238 !important;
+  color: #fff !important;
 }

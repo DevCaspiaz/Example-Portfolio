@@ -1,0 +1,74 @@
+main {
+  margin-top: 70px;
+  background: #c3feff;
+  background: linear-gradient(126deg, #cbf6f7 0%, #daccfc 34%, #e1a0eb 64%, #e4c073 100%);
+}
+main .about-me {
+  margin-top: 5rem;
+}
+main .about-me__container {
+  display: flex;
+  height: 400px;
+  justify-content: space-between;
+}
+main .about-me__container__info {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main .about-me__container__info .info__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main .about-me__container__info .info__text h1 {
+  font-size: clamp(1.25rem, 2.5883rem, 3rem);
+  width: 55%;
+}
+main .about-me__container__info .info__text-para {
+  font-size: clamp(1rem, 1.1912rem, 1.25rem);
+}
+main .about-me__container__info .info__text-para mark {
+  padding: 2px 4px;
+  color: #fff;
+  background-color: #132238;
+}
+main .about-me__container__info .info__text a {
+  font-size: 1.2rem;
+}
+main .about-me__container__info .info__statics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  grid-template-rows: auto;
+  gap: 5px;
+}
+main .about-me__container__info .info__statics__box {
+  padding: 10px 0px;
+  background-color: #f6ebfe;
+  border-radius: 2px;
+}
+main .about-me__container__info .info__statics__box-number {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #132238;
+}
+main .about-me__container__info .info__statics__box-tag {
+  color: #697484;
+}
+main .about-me__container__image {
+  width: 45%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+}
+main .about-me__container__image img {
+  display: block;
+  margin-right: 0;
+  border-radius: 10px;
+  object-fit: cover;
+}
