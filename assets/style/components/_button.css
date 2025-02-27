@@ -6,6 +6,8 @@
   color: #fff !important;
   font-weight: 600 !important;
   transition: all 0.3s ease-in-out;
+  outline: none;
+  border: none;
 }
 .link:hover {
   background-color: #132238 !important;
