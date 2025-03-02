@@ -52,6 +52,7 @@ main .about-me__container__statics .statics__box {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   gap: 5px;
   color: #132238;
 }
@@ -75,4 +76,62 @@ main .about-me__container__image img {
   height: 100%;
   object-fit: cover;
   border-radius: 5%;
+}
+@media (max-width: 1065px) {
+  main .about-me__container__image img {
+    width: 90%;
+  }
+}
+@media (max-width: 970px) {
+  main .about-me__container__image img {
+    width: 100%;
+  }
+}
+@media (max-width: 640px) {
+  main .about-me__container__image img {
+    border-radius: 50%;
+    height: 100%;
+  }
+}
+@media (max-width: 440px) {
+  main .about-me__container__image img {
+    height: 80%;
+  }
+}
+@media (max-width: 400px) {
+  main .about-me__container__image img {
+    height: 60%;
+  }
+}
+@media (max-width: 900px) {
+  main .about-me__container__statics {
+    grid-column: 1 / 3 span;
+  }
+  main .about-me__container__image {
+    grid-row: 1 / 4 span;
+  }
+}
+@media (max-width: 760px) {
+  main .about-me__container .about-me__text .about-me__text__heading {
+    width: 100%;
+  }
+  main .about-me__container__image {
+    grid-row: 1 / 2 span;
+  }
+  main .about-me__container__image img {
+    width: 100%;
+  }
+}
+@media (max-width: 640px) {
+  main .about-me__container__image {
+    grid-row: 1 / 1 span;
+  }
+  main .about-me__container__statics {
+    grid-column: 2 / 1 span;
+    grid-row: 2 / 1 span;
+    gap: 5px;
+  }
+  main .about-me__container__statics .statics__box {
+    padding: 0;
+  }
 }
