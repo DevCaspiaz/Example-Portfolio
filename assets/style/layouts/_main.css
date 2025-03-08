@@ -323,3 +323,96 @@ main .about-me__project__text__buttons .download-link:hover svg {
     width: 100%;
   }
 }
+main .process {
+  background-color: #f0f1f3;
+}
+main .process__container {
+  width: 75vw;
+  padding-top: 10rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+main .process__container__text {
+  width: 50%;
+}
+main .process__container__text__heading {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #132238;
+}
+main .process__container__text__para {
+  line-height: 1.5rem;
+  color: #8e97a3;
+}
+main .process__container__content {
+  width: max-content;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-areas: "a a . ." "a a b b" "a a b b" "a a b b" "a a b b" "a a b b" "a a b b" "a a b b" "a a b b" ". . b b" "c c . ." "c c d d" "c c d d" "c c d d" "c c d d" "c c d d" "c c d d" "c c d d" "c c d d" ". . d d";
+  gap: 20px;
+}
+main .process__container__content__items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  width: 200px;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+}
+main .process__container__content__items .items__icon {
+  padding: 10px;
+  background-color: #f4e9fd;
+  border-radius: 5px;
+}
+main .process__container__content__items .items__icon svg {
+  width: 25px;
+  height: 25px;
+  fill: #a53dff;
+}
+main .process__container__content__items .items__icon:hover {
+  background-color: #a53dff;
+}
+main .process__container__content__items .items__icon:hover svg {
+  fill: #fff;
+}
+main .process__container__content__items .items__text__heading {
+  font-size: 1rem;
+  color: #132238;
+  margin-bottom: 10px;
+}
+main .process__container__content__items .items__text__para {
+  color: #8e97a3;
+  font-size: 0.8rem;
+}
+main .process__container__content .item1 {
+  grid-area: a;
+}
+main .process__container__content .item2 {
+  grid-area: b;
+}
+main .process__container__content .item3 {
+  grid-area: c;
+}
+main .process__container__content .item4 {
+  grid-area: d;
+}
+@media (max-width: 820px) {
+  main .process__container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+  main .process__container__text {
+    width: 90%;
+  }
+  main .process__container__content__items {
+    width: 180px;
+  }
+}
