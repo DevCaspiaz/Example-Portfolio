@@ -16,7 +16,7 @@ a {
   text-decoration: none;
 }
 button {
-  cursor: pointer;
+  cursor: pointer !important;
 }
 header .nav {
   display: flex;
@@ -101,6 +101,7 @@ header .nav__menu .burger span:nth-of-type(3) {
 }
 header .nav__menu ul {
   display: flex;
+  align-items: center;
   gap: 1rem;
 }
 header .nav__menu ul .burger-menu-logo {
