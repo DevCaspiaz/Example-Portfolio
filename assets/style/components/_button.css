@@ -1,5 +1,4 @@
 .link {
-  display: inline-block;
   width: max-content !important;
   padding: 15px !important;
   border-radius: 5px !important;
@@ -9,7 +8,6 @@
   transition: all 0.3s ease-in-out;
   outline: none;
   border: none;
-  cursor: pointer;
 }
 .link:hover {
   background-color: #132238 !important;
