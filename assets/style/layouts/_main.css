@@ -96,18 +96,9 @@ main .about-me__container__image img {
 }
 @media (max-width: 970px) {
   main .about-me__container__image img {
-    width: 100%;
-  }
-}
-@media (max-width: 640px) {
-  main .about-me__container__image img {
-    border-radius: 50%;
-    height: 100%;
-  }
-}
-@media (max-width: 440px) {
-  main .about-me__container__image img {
-    height: 50%;
+    width: 70%;
+    height: 70%;
+    border-radius: 15%;
   }
 }
 @media (max-width: 900px) {
