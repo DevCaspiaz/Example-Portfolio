@@ -28,41 +28,37 @@ footer{
         &__menu{
             .flex-box(flex-start, center, 1.5rem);
             flex-wrap: wrap;
-            a.link:hover{
-                background-color: #fff !important;
-                color: @bg-color !important;
-            }
-            a:not(.link){
-                color: @text-color;
-                padding: 5px;
+            &__items:not(.footer-link-contact){
                 position: relative;
-                outline: none;
                 z-index: 9;
-
                 &::after{
                     content: "";
                     width: 140%;
-                    height: 120%;
+                    height: 150%;
                     background-color: @bg-color;
                     position: absolute;
-                    top: -10%;
+                    top: -25%;
                     left: 30%;
                     transform: skewX(-23deg);
                     border-radius: 5px;
                     outline: none;
                     border: none;
                     opacity: 0;
-                    transition: all .3s ease-in-out;
-                    
+                    transition: all .3s ease-in-out; 
+                }
+                a{
+                    color: #fff;
                 }
                 &:hover{
-                    color: #fff;
+                    cursor: pointer;
                 }
                 &:hover::after{
                     opacity: 1;
                     left: -20%;
+                    top: -25%;
                     z-index: -1;
                 }
+
             }
         }
     }

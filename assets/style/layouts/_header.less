@@ -7,7 +7,8 @@ header{
         position: fixed;
         top: 0;
         left: 0;
-        background-color: #fff;
+        background-color: #ffffffb2;
+        backdrop-filter: blur(5px);
         width: 100%;
         height: 70px;
         box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
@@ -80,38 +81,41 @@ header{
                 .burger-menu-logo{
                     display: none;
                 }
-                a:not(.link){
-                    color: #333333;
-                    padding: 5px;
+                li:not(.link-contact){
                     position: relative;
-                    transition:  color .3s ease-in-out;
-                    outline: none;
                     &::before{
                         content: "";
                         width: 140%;
-                        height: 120%;
+                        height: 200%;
                         position: absolute;
                         top: 0;
                         background-color: @bg-color;
                         transform: skewX(-23deg);
                         border-radius: 5px;
-                        top: -10%;
+                        top: -50%;
                         left: 20%;
                         opacity: 0;
                         transition: all .3s ease-in-out;
                         outline: none;
                         border: none;
                     }
-                    &:hover{
-                        color: #fff;
+                    a{
+                        color: #333333;
+                        padding: 5px;
+                        transition:  color .3s ease-in-out;
+                        outline: none;
                     }
-                    &:hover::before{
+                    &:hover:before{
                         left: -20%;
-                        top: -10%;
+                        top: -50%;
                         opacity: 1;
                         z-index: -1;
                     }
+                    &:hover a{
+                        color: #fff;
+                    }
                 }
+
 
             }
         }

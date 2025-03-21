@@ -4,16 +4,11 @@ main .about-me {
   margin-top: 70px;
   padding: 1.25rem clamp(0.625rem, 4.236vw, 6.25rem);
   position: relative;
-  height: 1300px;
+  height: 1200px;
 }
 @media (max-width: 900px) {
   main .about-me {
-    height: 1200px;
-  }
-}
-@media (max-width: 800px) {
-  main .about-me {
-    height: 1400px;
+    height: 1350px;
   }
 }
 main .about-me__container {
@@ -133,6 +128,9 @@ main .about-me__container__image img {
   main .about-me__container__image img {
     width: 100%;
   }
+  main .about-me__container .statics__box {
+    padding: 10px;
+  }
 }
 @media (max-width: 640px) {
   main .about-me__container__image {
@@ -142,9 +140,6 @@ main .about-me__container__image img {
     grid-column: 2 / 1 span;
     grid-row: 2 / 1 span;
     gap: 5px;
-  }
-  main .about-me__container__statics .statics__box {
-    padding: 0;
   }
 }
 main .about-me__project {
@@ -505,6 +500,11 @@ main .portfolio__content__items .items__text__link {
   border: 1px solid #a53dff;
   border-radius: 5px;
   font-size: 0.9rem;
+  transition: all 0.5s;
+  color: #a53dff;
+}
+main .portfolio__content__items .items__text__link span {
+  display: inline-block;
   transition: all 0.5s;
 }
 main .portfolio__content__items .items__text__link:hover span {

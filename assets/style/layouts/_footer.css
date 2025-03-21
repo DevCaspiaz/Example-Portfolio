@@ -36,24 +36,17 @@ footer .footer__nav__menu {
   gap: 1.5rem;
   flex-wrap: wrap;
 }
-footer .footer__nav__menu a.link:hover {
-  background-color: #fff !important;
-  color: #a53dff !important;
-}
-footer .footer__nav__menu a:not(.link) {
-  color: #8e97a3;
-  padding: 5px;
+footer .footer__nav__menu__items:not(.footer-link-contact) {
   position: relative;
-  outline: none;
   z-index: 9;
 }
-footer .footer__nav__menu a:not(.link)::after {
+footer .footer__nav__menu__items:not(.footer-link-contact)::after {
   content: "";
   width: 140%;
-  height: 120%;
+  height: 150%;
   background-color: #a53dff;
   position: absolute;
-  top: -10%;
+  top: -25%;
   left: 30%;
   transform: skewX(-23deg);
   border-radius: 5px;
@@ -62,12 +55,16 @@ footer .footer__nav__menu a:not(.link)::after {
   opacity: 0;
   transition: all 0.3s ease-in-out;
 }
-footer .footer__nav__menu a:not(.link):hover {
+footer .footer__nav__menu__items:not(.footer-link-contact) a {
   color: #fff;
 }
-footer .footer__nav__menu a:not(.link):hover::after {
+footer .footer__nav__menu__items:not(.footer-link-contact):hover {
+  cursor: pointer;
+}
+footer .footer__nav__menu__items:not(.footer-link-contact):hover::after {
   opacity: 1;
   left: -20%;
+  top: -25%;
   z-index: -1;
 }
 footer .footer__copyright p,
